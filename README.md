@@ -48,7 +48,6 @@ the image.
    unzip -o qsv-gnu.zip qsv -d .
    mv qsv qsv-glibc
    chmod +x qsv-glibc
-   ./qsv-glibc --version | tr ' ' '\n' | grep -i readstat   # confirm the feature is present
    ```
 
 4. **Add the wrapper script** that runs the glibc binary through a staged glibc dynamic linker
