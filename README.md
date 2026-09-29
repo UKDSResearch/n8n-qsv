@@ -88,7 +88,7 @@ the image.
    ```
 
 6. **Ensure `compose.yml`'s `n8n` service builds from that context** instead of pulling a
-   plain image:
+   plain image and add 'dataverse' network:
    ```yaml
      n8n:
        image: n8n-with-qsv:${N8N_VERSION}
@@ -96,6 +96,13 @@ the image.
          context: ${USER_DIR}/n8n-glibc-build
          args:
            N8N_VERSION: ${N8N_VERSION}
+       networks:
+         - dv
+
+     networks:
+       dv:
+         external: true
+         name: dataverse
    ```
 
 7. **Build and start:**
