@@ -1,15 +1,5 @@
 # N8N
 
-# Run
-Ensure Dataverse is up and running before n8n-compose
-Runs on http://localhost:5678
-```
-docker compose up -d
-```
-
-# Dataverse
-update DV api keys if changed (final post back to DV)
-
 # qsv (readstat) support
 
 The `n8n` container is musl-based (Alpine), but qsv's `readstat` feature (SAS/Stata/SPSS
